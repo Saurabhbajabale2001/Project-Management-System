@@ -1,0 +1,22 @@
+
+{% extends 'task_management_system_app/base.html' %}
+
+{% block content %}
+<!-- leave_request.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Request</title>
+</head>
+<body>
+    <h1>Leave Request Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Leave Request</button>
+    </form>
+</body>
+</html>
+{% endblock %}
